@@ -1,10 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
+import 'bootstrap-css-only/css/bootstrap.min.css'; 
+import 'mdbreact/dist/css/mdb.css';
 import "./styles.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Firebase, { FirebaseContext } from "./components/Firebase";
 import Layout from "./components/Layout";
+import withFirebaseAuth from 'react-with-firebase-auth'
+import * as firebase from 'firebase'
+const providers = {
+  googleProvider: new firebase.auth.GoogleAuthProvider()
+}
 
 function App() {
   return (
@@ -13,6 +18,8 @@ function App() {
     </FirebaseContext.Provider>
   );
 }
+
+
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);

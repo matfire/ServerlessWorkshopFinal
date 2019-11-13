@@ -20,8 +20,10 @@ class Firebase {
       firebase.initializeApp(config);
       this.db = firebase.firestore();
       this.auth = firebase.auth();
+      this.user = {}
     }
   }
+  setUser = (user) => this.user = user;
   polls = () => this.db.collection("polls"); // decide if you want to gei an instance, or a stream for the polls;;
   poll = pollId => this.db.collection("polls").doc(pollId); // decide if you want to gei an instance, or a stream for the poll;
 }
