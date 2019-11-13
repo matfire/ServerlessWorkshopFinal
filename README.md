@@ -1,2 +1,0 @@
-# ServerlessWorkshopFinal
-Created with CodeSandbox
